@@ -1,6 +1,6 @@
 import fs from "fs";
 import { join } from "path";
-import { blogs, metaData } from "../../../types";
+import { blogs, metaData } from '../../types';
 import matter from "gray-matter";
 
 const postsDirectory = join(process.cwd(), "content");
@@ -21,12 +21,13 @@ export function getAllBlogs(): blogs[] {
             const fileContents = fs.readFileSync(blogFullPath, 'utf8');
             const fileWithoutExtensiosn = fileName.replace('.mdx', '')
             const metaData = extractMetadata(fileContents)
+            const bodyWithoutMetadata = removeMetaData(fileContents)
             
             resp = [...resp, {
                 metaData: metaData,
                 folderName: directory,
                 fileName: fileWithoutExtensiosn,
-                content: fileContents,
+                content: bodyWithoutMetadata,
             }]
         });
 
@@ -48,6 +49,11 @@ function extractMetadata(markdownContent: string): metaData {
         date: data.data.date,
         image: data.data.image
     }
+}
+
+function removeMetaData(markdownContent: string): string {
+    const data = matter(markdownContent);
+    return data.content
 }
 
 export function capilizeFirstLetter(string: string) {

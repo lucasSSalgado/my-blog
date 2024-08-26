@@ -27,6 +27,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/posts/page.mdx"
-  ],
+, "content/outros/code.mdx"  ],
   "exclude": ["node_modules"]
 }

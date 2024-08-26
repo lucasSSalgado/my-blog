@@ -1,5 +1,5 @@
 import BlogCard from "@/app/components/BlogCard"
-import { getAllBlogs } from "../../utils/utils"
+import { getAllBlogs } from "@/utils/utils"
 
 export default function Page({ params }: { params: { slug: string } }) {
     const { slug } = params

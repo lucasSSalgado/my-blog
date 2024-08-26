@@ -1,5 +1,5 @@
 import FolderCard from "../components/FolderCard"
-import { getAllFolders } from "../utils/utils"
+import { getAllFolders } from "@/utils/utils";
 
 export default function Page() {
     const folders = getAllFolders()

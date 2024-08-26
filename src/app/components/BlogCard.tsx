@@ -7,7 +7,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { metaData } from "../../../types"
-import { capilizeFirstLetter, formatDate } from "../utils/utils"
+import { capilizeFirstLetter, formatDate } from "@/utils/utils"
 import Link from "next/link"
 
 interface Porps extends metaData {
@@ -19,7 +19,9 @@ export default function BlogCard({ title, description, date, image, folder, file
     return <div>
         <Card>
             <CardHeader>
-                <CardTitle>{ capilizeFirstLetter(title) }</CardTitle>
+                <CardTitle>
+                    <Link href={`/blog/${folder}/${filename}`}>{ capilizeFirstLetter(folder) }</Link>
+                </CardTitle>
                 <CardDescription>{ capilizeFirstLetter(description) }</CardDescription>
             </CardHeader>
             <CardFooter>
