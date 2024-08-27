@@ -65,3 +65,16 @@ export function formatDate(date: string) {
     console.log(formatedDate);
     return formatedDate
 }
+
+export function getLastPost(): blogs {
+    let blogs = getAllBlogs()
+
+    let resp: blogs = blogs[0] 
+    blogs.map(b => {
+        if (new Date(b.metaData.date) > new Date(resp.metaData.date)) {
+            resp = b
+        }
+    })
+
+    return resp
+}

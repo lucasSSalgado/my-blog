@@ -26,7 +26,7 @@ export default function BlogCard({ title, description, date, image, folder, file
             </CardHeader>
             <CardFooter>
                 <p>{ formatDate(date) }</p>
-                <Link className="ml-auto" href={`/posts/${folder}/${filename}`}>Leia mais...</Link>
+                <Link className="ml-auto" href={`/blog/${folder}/${filename}`}>Leia mais...</Link>
             </CardFooter>
         </Card>
     </div>

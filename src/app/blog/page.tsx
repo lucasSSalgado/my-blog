@@ -3,7 +3,6 @@ import { getAllFolders } from "@/utils/utils";
 
 export default function Page() {
     const folders = getAllFolders()
-    console.log(folders)
 
     return <div className="mt-5">
         <h2 className="text-2xl">Escolha a categoria</h2>
