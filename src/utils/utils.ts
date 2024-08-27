@@ -1,6 +1,6 @@
 import fs from "fs";
 import { join } from "path";
-import { blogs, metaData } from '../../types';
+import { blogs, lastBlog, metaData, content } from '../../types';
 import matter from "gray-matter";
 
 const postsDirectory = join(process.cwd(), "content");
@@ -13,6 +13,7 @@ export function getAllBlogs(): blogs[] {
 
     // get all files inside the directories
     directories.forEach((directory) => {
+        if (directory === 'content.json') return
         const fullPath = join(postsDirectory, directory);
         const allFilesInDirectory = fs.readdirSync(fullPath)    
         
@@ -37,8 +38,10 @@ export function getAllBlogs(): blogs[] {
     return resp
 }
 
-export function getAllFolders(): string[] {
-    return fs.readdirSync(postsDirectory)
+export function getAllTopics(): content {
+    const content = fs.readFileSync(join(postsDirectory, 'content.json'), 'utf8');
+    const contentObj: content = JSON.parse(content)
+    return contentObj
 }
 
 function extractMetadata(markdownContent: string): metaData {
@@ -66,7 +69,7 @@ export function formatDate(date: string) {
     return formatedDate
 }
 
-export function getLastPost(): blogs {
+export function getLastPost(): lastBlog {
     let blogs = getAllBlogs()
 
     let resp: blogs = blogs[0] 
@@ -76,5 +79,8 @@ export function getLastPost(): blogs {
         }
     })
 
-    return resp
+    return {
+        ...resp,
+        path: `/blog/${resp.folderName}/${resp.fileName}`
+    }
 }

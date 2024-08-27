@@ -11,3 +11,17 @@ export interface metaData {
     date: string
     image: string
 }
+
+export interface lastBlog extends blogs {
+    path: string
+}
+
+export interface content {
+    topics: Topic[]
+}
+
+export interface Topic {
+    folder: string
+    description: string
+    image: string
+}

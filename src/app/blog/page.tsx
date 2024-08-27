@@ -1,19 +1,19 @@
 import FolderCard from "../components/FolderCard"
-import { getAllFolders } from "@/utils/utils";
+import { getAllTopics } from "@/utils/utils";
 
 export default function Page() {
-    const folders = getAllFolders()
+    const content = getAllTopics()
 
     return <div className="mt-5">
         <h2 className="text-2xl">Escolha a categoria</h2>
         <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-10">
         {
-            folders.map(folder => 
+            content.topics.map(t => 
                 <FolderCard 
-                    key={folder} 
-                    title={folder} 
-                    description="teste" 
-                    image="https://placeimg.com/400/225/arch"
+                    key={t.folder} 
+                    title={t.folder} 
+                    description={t.description} 
+                    image={t.image}
                 /> 
             )
         }

@@ -16,17 +16,19 @@ interface Porps extends metaData {
 }
 
 export default function BlogCard({ title, description, date, image, folder, filename }: Porps) {
+    const url = `/blog/${folder}/${filename}`
+
     return <div>
         <Card>
             <CardHeader>
                 <CardTitle>
-                    <Link href={`/blog/${folder}/${filename}`}>{ capilizeFirstLetter(folder) }</Link>
+                    <Link href={url}>{ capilizeFirstLetter(title) }</Link>
                 </CardTitle>
                 <CardDescription>{ capilizeFirstLetter(description) }</CardDescription>
             </CardHeader>
             <CardFooter>
                 <p>{ formatDate(date) }</p>
-                <Link className="ml-auto" href={`/blog/${folder}/${filename}`}>Leia mais...</Link>
+                <Link className="ml-auto" href={url}>Leia mais...</Link>
             </CardFooter>
         </Card>
     </div>

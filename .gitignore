@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# optmize images
+/public/nextImageExportOptimizer
+/public/images/nextImageExportOptimizer

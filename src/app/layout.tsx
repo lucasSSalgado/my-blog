@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={cn(
-          "min-h-screen bg-amber-50 font-sans antialiased",
+          "min-h-screen bg-amber-100 font-sans antialiased",
           fontSans.variable
         )}>
         <Navbar />
