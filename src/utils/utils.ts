@@ -81,6 +81,7 @@ export function getLastPost(): lastBlog {
 
     return {
         ...resp,
-        path: `/blog/${resp.folderName}/${resp.fileName}`
+        blogPath: `/blog/${resp.folderName}/${resp.fileName}`,
+        folderPath: `/blog/${resp.folderName}`
     }
 }

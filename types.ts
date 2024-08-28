@@ -13,7 +13,8 @@ export interface metaData {
 }
 
 export interface lastBlog extends blogs {
-    path: string
+    blogPath: string
+    folderPath: string
 }
 
 export interface content {

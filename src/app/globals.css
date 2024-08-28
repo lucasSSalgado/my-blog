@@ -67,3 +67,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+.underline-animation {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+.underline-animation:hover::after {
+  width: 100%;
+}

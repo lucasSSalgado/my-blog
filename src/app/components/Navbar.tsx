@@ -8,7 +8,7 @@ export default function Navbar() {
 
         <nav 
             className="w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize flex 
-            items-center fixed top-8 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm"
+            items-center fixed top-8 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-20"
         >
             <Link href="/" className="mx-2 hover:underline">Home</Link>
             <Link href="/blog" className="mx-3 hover:underline">Blogs</Link>

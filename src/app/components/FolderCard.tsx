@@ -29,7 +29,7 @@ export default function FolderCard({ title, description, image }: Props) {
             </div>
             <CardHeader className="relative z-10 text-white">
                 <CardTitle className="text-3xl font-bold">
-                    <Link href={`/blog/${title}`}>{ capilizeFirstLetter(title) }</Link>
+                    <Link className="underline-animation" href={`/blog/${title}`}>{ capilizeFirstLetter(title) }</Link>
                 </CardTitle>
                 <CardDescription className="pt-5 text-white">
                     { capilizeFirstLetter(description) }
