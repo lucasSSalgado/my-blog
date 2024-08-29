@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google"
+import { Work_Sans as WorkSans } from "next/font/google"
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { cn } from "@/lib/utils"
 import { siteMetaData } from '@/metaData'
- 
-const fontSans = FontSans({
+import Footer from "./components/Footer";
+
+const workSans = WorkSans({
   subsets: ["latin"],
   variable: "--font-sans",
 })
@@ -52,12 +53,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(
           "min-h-screen bg-amber-100 font-sans antialiased",
-          fontSans.variable
+          workSans.variable
         )}>
         <Navbar />
-        <div className="mx-auto w-10/12 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-10/12 flex flex-col min-h-lvh px-4 sm:px-6 lg:px-8">
           { children }
         </div>
+        <Footer />
       </body>
     </html>
   );

@@ -78,10 +78,10 @@
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
-  bottom: -4px;
+  height: 5px;
+  bottom: -3px;
   left: 0;
-  background-color: white;
+  background-color: rgb(43, 189, 226);
   transition: width 0.3s ease-in-out;
 }
 

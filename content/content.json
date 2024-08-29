@@ -1,18 +1,18 @@
 {
     "topics": [
         { 
-            "folder": "financas",
-            "description": "description financas",
-            "image": "/images/teste.jpg"
+            "folder": "economia",
+            "description": "Finanças, investimento, economia.",
+            "image": "/images/financas.jpg"
         },
         {
             "folder": "outros",
-            "description": "description outros",
+            "description": "Evidentemente, tudo que não tem uma categoria própria!",
             "image": "/images/teste.jpg"
         },
         {
             "folder": "historia",
-            "description": "description historia",
+            "description": "Livros e reflexões sobre históricas.",
             "image": "/images/teste.jpg"
         }
     ]

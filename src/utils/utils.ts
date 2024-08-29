@@ -65,7 +65,6 @@ export function capilizeFirstLetter(string: string) {
 
 export function formatDate(date: string) {
     const formatedDate =  new Date(date).toLocaleString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
-    console.log(formatedDate);
     return formatedDate
 }
 
@@ -83,5 +82,14 @@ export function getLastPost(): lastBlog {
         ...resp,
         blogPath: `/blog/${resp.folderName}/${resp.fileName}`,
         folderPath: `/blog/${resp.folderName}`
+    }
+}
+
+export function formatTextIfBig(text: string) {
+    const maxSize = 187
+    if (text.length > maxSize) {
+        return text.slice(0, maxSize) + '...'
+    } else {
+        return text
     }
 }
