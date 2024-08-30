@@ -5,8 +5,8 @@ export default function Page() {
     const content = getAllTopics()
 
     return <div className="mt-5">
-        <h2 className="text-3xl font-semibold">Escolha a categoria:</h2>
-        <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-10">
+        <h2 className="text-3xl font-semibold underlined-text">Escolha a categoria:</h2>
+        <div className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-10">
             {
                 content.topics.map(t => 
                     <FolderCard 

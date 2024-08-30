@@ -1,6 +1,5 @@
 import {
     Card,
-    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,
@@ -11,12 +10,12 @@ import { capilizeFirstLetter, formatDate, formatTextIfBig } from "@/utils/utils"
 import Link from "next/link"
 import ExportedImage from "next-image-export-optimizer"
 
-interface Porps extends metaData {
+interface Props extends metaData {
     folder: string
     filename: string
 }
 
-export default function BlogCard({ title, description, date, image, folder, filename }: Porps) {
+export default function BlogCard({ title, description, date, image, folder, filename }: Props) {
     const url = `/blog/${folder}/${filename}`
 
     return <div className="relative rounded-xl h-[12rem] overflow-hidden border border-solid border-dark">

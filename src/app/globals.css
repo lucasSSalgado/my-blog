@@ -88,3 +88,8 @@
 .underline-animation:hover::after {
   width: 100%;
 }
+
+.underlined-text {
+  text-decoration: underline;
+  text-decoration-color: rgb(240, 66, 238);
+}
