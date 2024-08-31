@@ -18,8 +18,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const body = await markdownToHtml(file?.content || '')
 
     return (
-        <div className="w-10/12 mx-auto mt-5">
-            <div dangerouslySetInnerHTML={{ __html: body }} />
-        </div>
+        <article className="mt-5" dangerouslySetInnerHTML={{ __html: body }} />
     );
 }
