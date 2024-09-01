@@ -12,7 +12,7 @@ export default function Navbar() {
         >
             <Link href="/" className="mx-2 hover:scale-105 transition-all ease duration-100">Home</Link>
             <Link href="/blog" className="mx-3 hover:scale-105 transition-all ease duration-100">Blogs</Link>
-            <Link href="/contact" className="mx-2 hover:scale-105 transition-all ease duration-100">Contato</Link>
+            <Link href="/about" className="mx-2 hover:scale-105 transition-all ease duration-100">Sobre</Link>
         </nav>
 
         <div>
