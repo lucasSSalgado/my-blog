@@ -50,11 +50,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(
-          "min-h-screen bg-amber-100 font-sans antialiased",
-          workSans.variable
-        )}>
+    <html lang="pt-BR">
+      <body className={cn( "min-h-screen bg-lime-50 font-sans antialiased", workSans.variable )}>
         <Navbar />
         <div className="mx-auto w-10/12 flex flex-col min-h-lvh px-4 sm:px-6 lg:px-8">
           { children }

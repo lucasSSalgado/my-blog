@@ -5,8 +5,8 @@ import LogoImage from '../../../public/images/profile-img.png'
 export default function Logo() {
     return <Link href="/" className="flex items-center text-dark">
         <div className="w-16 rounded-full overflow-hidden border border-solid border-dark m-4">
-            <ExportedImage src={LogoImage} alt="Logo" className="w-full h-auto rounded-full"/>
+            <ExportedImage src={ LogoImage } alt="Logo" className="w-full h-auto rounded-full"/>
         </div>
-        <span className="font-bold text-xl">CodeBlocks</span>
+        <span className="font-bold text-xl">Lucas S. Salgado</span>
     </Link>
 }

@@ -11,22 +11,23 @@ export default function Page() {
                 3) Me estimular a pensar mais sobre as coisas que leio, assim como organizar essas ideias de forma coesa.
             </p>
             <p>
-                Me chamo Lucas, tenho formação em Economia pelo Universidade Católica de Minas Gerais e trabalho como programador.
+                Me chamo Lucas, tenho formação em Economia pelo Universidade Católica de Minas Gerais e trabalho como programador Java Spring.
+                Apesar de ser bastante confortável com algumas outras tecnologias, como node.js e Golang.
             </p>
             <h4>Meus contatos</h4>
             <ul>
                 <li>
-                    <a href="https://www.linkedin.com/in/lucas-salgado-2a1448254/" target="_blank" className="inline-block w-6 h-6 mx-3">
+                    <a href="https://www.linkedin.com/in/lucas-salgado-2a1448254/" target="_blank" className="inline-block w-6 h-6 mx-3 hover:scale-110 transition-all ease duration-200">
                         Linkedin
                     </a>
                 </li>
                 <li>
-                    <a href="https://github.com/lucasSSalgado" target="_blank" className="inline-block w-6 h-6 mx-3">
+                    <a href="https://github.com/lucasSSalgado" target="_blank" className="inline-block w-6 h-6 mx-3 hover:scale-110 transition-all ease duration-200">
                         Github
                     </a>
                 </li>
                 <li>
-                    <a href="https://x.com/lucssslucsss" target="_blank" className="inline-block w-6 h-6 mx-3">
+                    <a href="https://x.com/lucssslucsss" target="_blank" className="inline-block w-6 h-6 mx-3 hover:scale-110 transition-all ease duration-200">
                         Twitter
                     </a>
                 </li>
