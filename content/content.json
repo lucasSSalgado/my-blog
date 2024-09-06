@@ -3,17 +3,17 @@
         { 
             "folder": "economia",
             "description": "Finanças, investimento, economia.",
-            "image": "/images/financas.jpg"
+            "image": "/images/financas2.jpg"
         },
         {
             "folder": "outros",
             "description": "Evidentemente, tudo que não tem uma categoria própria!",
-            "image": "/images/teste.jpg"
+            "image": "/images/others.jpg"
         },
         {
-            "folder": "historia",
-            "description": "Livros e reflexões sobre históricas.",
-            "image": "/images/teste.jpg"
+            "folder": "origem do dinheiro",
+            "description": "Série de artigos investigando a origem do dinheiro. Quais caracteristicas tem um bom dinheiro. Fim do padrão ouro. E Bitcoin.",
+            "image": "/images/origem_of_money.jpg"
         }
     ]
 }

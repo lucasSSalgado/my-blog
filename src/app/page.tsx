@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import ExportedImage from 'next-image-export-optimizer';
-import { capilizeFirstLetter, formatDate, getLastPost } from '@/utils/utils';
+import { capilizeFirstLetter, formatDate, getLastPost, removeUnderlineInTitle } from '@/utils/utils';
 import { lastBlog } from '../../types';
 import LatestArticles from './components/LastetArticles';
 
@@ -30,13 +30,13 @@ const FeaturedPost = ({ post }:{ post: lastBlog }) => (
           href={post.folderPath}
         >
           <span className="block rounded-xl bg-zinc-800 text-white py-2 px-6 font-medium text-sm md:text-base">
-            { capilizeFirstLetter(post.folderName) }
+            { capilizeFirstLetter(removeUnderlineInTitle(post.folderName)) }
           </span>
         </Link>
       </div>
 
-      <div className="flex justify-between mt-10 gap-2 mx-auto">
-        <div className="font-bold text-lg text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.8),_0_4px_8px_rgba(0,0,0,0.6)] bg-zinc-800 bg-opacity-70 p-3 rounded-lg">
+      <div className="flex justify-between mt-14 gap-2 mx-auto">
+        <div className="font-bold text-lg text-white w-full [text-shadow:_0_2px_4px_rgba(0,0,0,0.8),_0_4px_8px_rgba(0,0,0,0.6)] bg-zinc-800 bg-opacity-70 p-3 rounded-lg">
           <p>{ post.metaData.description } </p>
           <p className='text-right'> { formatDate(post.metaData.date) } </p>
         </div> 

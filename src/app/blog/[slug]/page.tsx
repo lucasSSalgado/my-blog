@@ -1,5 +1,5 @@
 import BlogCard from "@/app/components/BlogCard"
-import { capilizeFirstLetter, getAllBlogs } from "@/utils/utils"
+import { capilizeFirstLetter, getAllBlogs, removeUnderlineInTitle } from "@/utils/utils"
 
 export default function Page({ params }: { params: { slug: string } }) {
     const { slug } = params
@@ -9,9 +9,9 @@ export default function Page({ params }: { params: { slug: string } }) {
     
     return <div className="p-5">
         <h2 className="font-semibold text-3xl underlined-text"> 
-            { capilizeFirstLetter(slug) }: 
+            { capilizeFirstLetter(removeUnderlineInTitle(slug)) }: 
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-7 mt-8">
             { allSlugBlogs.map((blog) => (
                 <BlogCard 
                     key={blog.metaData.title} 

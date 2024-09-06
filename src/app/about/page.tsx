@@ -1,8 +1,6 @@
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "../components/Icons";
-
 export default function Page() {
     return <div className="mt-10">
-        <h1 className="text-3xl font-semibold underlined-text">Sobre</h1>
+        <h1 className="text-3xl font-semibold underlined-text w-10/12 mx-auto">Sobre</h1>
         <div className="prose-lg prose max-w-none w-10/12 mx-auto mt-10">
             <p>
                 O propósito desse blog é compartilhar ideias que tenha e resumo sobre livros que leio. Com três grandes objetivos.

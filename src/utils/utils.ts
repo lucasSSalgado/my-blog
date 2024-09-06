@@ -93,3 +93,11 @@ export function formatTextIfBig(text: string) {
         return text
     }
 }
+
+export function removeUnderlineInTitle(text: string) {
+    return text.replace(/_/g, ' ')
+}
+
+export function addInderlineInTitle(text: string) {
+    return text.replace(/ /g, '_')
+}
