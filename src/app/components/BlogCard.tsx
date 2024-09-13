@@ -44,7 +44,7 @@ export default function BlogCard({ title, description, date, image, folder, file
                     { formatTextIfBig(description) }
                 </CardDescription>
             </CardHeader>
-            <CardFooter className="relative z-20 mt-auto text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.8),_0_4px_8px_rgba(0,0,0,0.6),_0_8px_16px_rgba(0,0,0,0.4)]">
+            <CardFooter className="hidden md:flex  relative z-20 mt-auto text-white [text-shadow:_0_2px_4px_rgba(0,0,0,0.8),_0_4px_8px_rgba(0,0,0,0.6),_0_8px_16px_rgba(0,0,0,0.4)]">
                 <p>{ formatDate(date) }</p>
                 <Link className="ml-auto underline-animation" href={url}>Leia mais...</Link>
             </CardFooter>

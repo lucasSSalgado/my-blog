@@ -1,5 +1,5 @@
 export default function Page() {
-    return <div className="mt-10">
+    return <div className="mt-16 md:mt-10">
         <h1 className="text-3xl font-semibold underlined-text w-10/12 mx-auto">Sobre</h1>
         <div className="prose-lg prose max-w-none w-10/12 mx-auto mt-10 text-primary">
             <p>
