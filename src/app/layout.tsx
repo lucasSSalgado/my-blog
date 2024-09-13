@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import { cn } from "@/lib/utils"
 import { siteMetaData } from '@/metaData'
 import Footer from "./components/Footer";
+import { ThemeProvider } from "./components/theme-provider";
 
 const workSans = WorkSans({
   subsets: ["latin"],
@@ -51,12 +52,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={cn( "min-h-screen bg-lime-50 font-sans antialiased", workSans.variable )}>
-        <Navbar />
-        <div className="mx-auto w-10/12 flex flex-col min-h-lvh px-4 sm:px-6 lg:px-8">
-          { children }
-        </div>
-        <Footer />
+      <body className={cn( "min-h-screen bg-secondary font-sans antialiased", workSans.variable )}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+          <Navbar />
+            <div className="md:w-10/12 mx-auto w-11/12 flex flex-col min-h-lvh px-4 sm:px-6 lg:px-8">
+              { children }
+            </div>
+          <Footer />
+          </ThemeProvider>
+        
       </body>
     </html>
   );

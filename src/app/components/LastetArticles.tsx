@@ -8,7 +8,7 @@ export default function LatestArticles() {
 
     return (
         <div className="mt-14 mb-10">
-            <h2 className="font-semibold text-3xl mb-4">Últimos Artigos:</h2>
+            <h2 className="font-semibold text-3xl mb-4 text-center md:text-left">Últimos Artigos:</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
                 {
                     lastSix.map(blog => (

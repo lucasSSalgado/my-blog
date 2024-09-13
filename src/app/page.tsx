@@ -14,7 +14,7 @@ const FeaturedPost = ({ post }:{ post: lastBlog }) => (
         fill
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-opacity-40"></div>
     </div>
 
     <div className="relative z-10">
@@ -26,7 +26,7 @@ const FeaturedPost = ({ post }:{ post: lastBlog }) => (
         </h1>
 
         <Link 
-          className="inline-block mt-6 rounded-xl bg-gradient-to-r from-violet-600 via-blue-300 to-emerald-500 p-[2px] hover:scale-105 transition-all ease duration-200" 
+          className="inline-block mx-auto md:mx-0 mt-6 rounded-xl bg-gradient-to-r from-violet-600 via-blue-300 to-emerald-500 p-[2px] hover:scale-105 transition-all ease duration-200" 
           href={post.folderPath}
         >
           <span className="block rounded-xl bg-zinc-800 text-white py-2 px-6 font-medium text-sm md:text-base">
@@ -36,7 +36,7 @@ const FeaturedPost = ({ post }:{ post: lastBlog }) => (
       </div>
 
       <div className="flex justify-between mt-14 gap-2 mx-auto">
-        <div className="font-bold text-lg text-white w-full [text-shadow:_0_2px_4px_rgba(0,0,0,0.8),_0_4px_8px_rgba(0,0,0,0.6)] bg-zinc-800 bg-opacity-70 p-3 rounded-lg">
+        <div className="font-bold text-lg text-white w-full [text-shadow:_0_2px_4px_rgba(0,0,0,0.8),_0_4px_8px_rgba(0,0,0,0.6)] bg-opacity-70 p-3 rounded-lg">
           <p>{ post.metaData.description } </p>
           <p className='text-right'> { formatDate(post.metaData.date) } </p>
         </div> 
@@ -49,7 +49,7 @@ export default function Home() {
   const post = getLastPost();
 
   return (
-    <main className="container mx-auto px-4">
+    <main className="md:container md:px-4 md:mt-2 mx-auto mt-10 items-center">
       <FeaturedPost post={post} />
       <LatestArticles />
     </main>
