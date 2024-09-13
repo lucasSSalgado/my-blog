@@ -6,7 +6,7 @@ import { lastBlog } from '../../types';
 import LatestArticles from './components/LastetArticles';
 
 const FeaturedPost = ({ post }:{ post: lastBlog }) => (
-  <div className="relative w-11/12 mx-auto py-5 px-10 rounded-3xl overflow-hidden mt-5 border border-solid border-dark shadow-lg shadow-zinc-500/50">
+  <div className="relative w-11/12 mx-auto py-5 px-10 rounded-3xl overflow-hidden mt-5 border border-solid border-dark shadow-lg shadow-zinc-700/50">
     <div className="absolute inset-0">
       <ExportedImage
         src={post.metaData.image}

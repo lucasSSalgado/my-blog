@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="mt-auto bg-primary-foreground p-6">
+        <footer className="mt-auto bg-primary text-primary-foreground dark:bg-neutral-900 dark:text-white p-6">
             <div className="container mx-auto text-center flex w-10/12 justify-evenly">
                 <p>&copy; {new Date().getFullYear()} Todos os direitos reservados.</p>
                 <div className="flex justify-center space-x-4">
