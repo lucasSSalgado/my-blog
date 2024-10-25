@@ -17,12 +17,6 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center">
-            <a href="https://www.linkedin.com/in/lucas-salgado-2a1448254/" target="_blank" className="inline-block w-6 h-6 mx-3">
-                <LinkedinIcon className="hover:scale-125 transition-all ease duration-200"/>
-            </a>
-            <a href="https://github.com/lucasSSalgado" target="_blank" className="inline-block w-6 h-6 mx-3">
-                <GithubIcon className="hover:scale-125 transition-all ease duration-200"/>
-            </a>
             <a href="https://x.com/lucssslucsss" target="_blank" className="inline-block w-6 h-6 mx-3">
                 <TwitterIcon className="hover:scale-125 transition-all ease duration-200"/>
             </a>

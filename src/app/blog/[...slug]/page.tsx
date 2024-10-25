@@ -1,5 +1,5 @@
 import markdownToHtml from "@/utils/markdownToHtml";
-import { getAllBlogs } from "@/utils/utils";
+import { getAllBlogs, timeToRead } from "@/utils/utils";
 
 export function generateStaticParams() {
     const blogs = getAllBlogs()
@@ -16,8 +16,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
     const folder = blogs.filter(b => b.folderName === slug[0])
     const file = folder.find(f => f.fileName === slug[1])
     const body = await markdownToHtml(file?.content || '')
+    //const time = timeToRead(body)
+
 
     return (
-        <article className="mt-5" dangerouslySetInnerHTML={{ __html: body }} />
+        <article dangerouslySetInnerHTML={{ __html: body }} />
     );
 }

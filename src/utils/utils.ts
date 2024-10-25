@@ -101,3 +101,9 @@ export function removeUnderlineInTitle(text: string) {
 export function addInderlineInTitle(text: string) {
     return text.replace(/ /g, '_')
 }
+
+export function timeToRead(text: string) {
+    const words = text.trim().split(/\s+/).length;
+    const wordsPerMinute = 200;
+    return Math.ceil(words / wordsPerMinute);
+}

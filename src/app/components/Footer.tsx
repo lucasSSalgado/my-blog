@@ -9,17 +9,8 @@ export default function Footer() {
                         className="hover:scale-105 transition-all ease duration-100">
                         Twitter
                     </a>
-                    <a href="https://github.com/lucasSSalgado" target="_blank" rel="noopener noreferrer" 
-                        className="hover:scale-105 transition-all ease duration-100">
-                        Github
-                    </a>
-                    <a href="https://www.linkedin.com/in/lucas-salgado-2a1448254/" target="_blank" rel="noopener noreferrer" 
-                        className="hover:scale-105 transition-all ease duration-100">
-                        LinkedIn
-                    </a>
+                    <p className="mt-3 md:mt-0">Nome sei la o que.</p>
                 </div>
-                
-                <p className="mt-3 md:mt-0">Lucas Sodré Salgado.</p>
             </div>
         </footer>
     );
